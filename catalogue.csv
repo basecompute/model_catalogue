@@ -1,0 +1,16 @@
+#version=1
+# flagship: once BaseRT's registry serves Qwen3.8-27B, ADD rows gated
+# on that runtime version, e.g.
+#   mac_unified,24,flagship,basecompute/Qwen3.8-27B,,0.3.0,
+# so older runtimes keep the Qwen3.6-27B fallback below.
+platform,memory_gb,role,model,variant,min_basert,min_local
+mac_unified,8,fast,basecompute/gemma-4-E2B-it,,,
+mac_unified,8,balanced,basecompute/gemma-4-E4B-it,,,
+mac_unified,16,fast,basecompute/gemma-4-E2B-it,,,
+mac_unified,16,balanced,basecompute/gemma-4-E4B-it,,,
+mac_unified,24,fast,basecompute/gemma-4-E4B-it,,,
+mac_unified,24,balanced,basecompute/gemma-4-26B-A4B-it,,,
+mac_unified,24,flagship,basecompute/Qwen3.6-27B,,,
+mac_unified,32,fast,basecompute/gemma-4-E4B-it,,,
+mac_unified,32,balanced,basecompute/Qwen3.6-35B-A3B,,,
+mac_unified,32,flagship,basecompute/Qwen3.6-27B,,,
